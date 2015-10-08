@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="resgrid.cordova.plugins.uservoice"
+    version="1.0.0">
+
+    <name>UserVoice</name>
+
+    <description>
+      This plugin adds the UserVoice user engagement interface to your application.
+    </description>
+
+    <license>https://raw.githubusercontent.com/Resgrid/cordova-plugins-uservoice/master/LICENSE</license>
+
+    <keywords>resgrid, uservoice, user, voice, engagement, customer, helpdesk, knowledge, reporting</keywords>
+
+    <engines>
+        <engine name="cordova" version=">=3.3.0" />
+    </engines>
+
+    <!-- JavaScript interface -->
+    <js-module src="www/uservoice.js" name="UserVoiceJSInterface">
+        <clobbers target="window.Uservoice" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CDVUserVoice">
+                <param name="ios-package" value="CDVUserVoice" />
+            </feature>
+            <plugin name="CDVUserVoice" value="CDVUserVoice"/>
+        </config-file>
+
+        <header-file src="platforms/ios/CDVUserVoice.h" />
+        <source-file src="platforms/ios/CDVUserVoice.m" />
+
+        <framework src="platforms/ios/UserVoiceSDK/libUserVoice.a" />
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CDVUserVoice">
+                <param name="android-package" value="resgrid.cordova.plugins.userVoice" />
+            </feature>
+        </config-file>
+
+        <!-- copy Rollbar Lib -->
+        <source-file src="platforms/android/UserVoiceSDK/uservoice-android-sdk-1.2.4-sources.jar" target-dir="libs/" framework="true" />
+
+        <!-- cordova plugin src files -->
+        <source-file src="platforms/android/resgrid/cordova/plugins/CDVUserVoice.java" target-dir="src/resgrid/cordova/plugins/" />
+
+    </platform>
+
+</plugin>
+
