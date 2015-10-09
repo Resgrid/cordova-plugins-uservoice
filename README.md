@@ -1,7 +1,7 @@
 Resgrid's UserVoice Cordova Plugin
 ==============
 
-PhoneGap / Cordova plugin for using the UserVoice service. Currently supports Android and iOS allowing for accessing the native UserVoice experiance from a Cordova applications. 
+PhoneGap / Cordova plugin for using the UserVoice service. Currently supports Android and iOS allowing for accessing the native UserVoice experience from a Cordova application. 
 
 About Resgrid
 -------------
@@ -10,6 +10,11 @@ Resgrid is a software as a service (SaaS) logistics, management and communicatio
 Resgrid is built on Microsoft's Azure platform, utilizing the Ionic Framework/Cordova/Angular for mobile applications.
 
 Sign up for your free [Resgrid Account Today!](https://resgrid.com).
+
+UserVoice
+-------------
+
+This plugin requires a UserVoice account. Sign up for your free UserVoice account [here](https://www.uservoice.com/).
 
 ## Installation ##
 You can install the plugin by running the following command.
@@ -22,7 +27,6 @@ cordova plugin add https://github.com/Resgrid/cordova-plugins-uservoice.git
 
 - Android
 - iOS
-- WP8 (Coming Soon)
 
 ## Notes ##
 Currently in development, we welcome PR's and other fixes. Hope to have it production ready soon.

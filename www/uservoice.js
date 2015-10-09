@@ -10,42 +10,24 @@ var exec = require('cordova/exec');
 
 var Uservoice = function(){};
 
-Uservoice.launch = function(site, key, secret, task, cfg){
-	cfg = cfg?cfg:{};
-	if(Object.prototype.toString.call(cfg)!='[object Object]'){
-		alert('Invalid UserVoice Config');
-		cfg = {};
-	}
-	var config = {
-		//task:'viewForum',//[launchFeedback|contactUs|viewForum|postIdea]
-		task:task,
+Uservoice.init = function(site, key, secret){
+	cordova.exec(successCallback, errorCallback, "CDVUserVoice", 'init', [site, key, secret]);	
+};
 
-		site:site,
-		key:key,
-		secret:secret,
-		
-		topicId:1,//[0|453|333 (any valid topicId)]
-		showContactUs:0,//[0|1]
-		showForum:0,//[0|1]
-		showPostIdea:0,//[0|1]
-		showKnowledgeBase:0//[0|1]
-	};
-	//Ext.Msg.alert('', Ext.encode(config))
-	for(var key in config){
-		if (typeof cfg[key] !== "undefined"){
-			if(key=='task' && cfg[key]!='launchFeedback' && cfg[key]!='contactUs' && cfg[key]!='viewForum' && cfg[key]!='postIdea'){
-				alert('UserVoice task "'+cfg[key]+'" not supported. Supported tasks are launchFeedback,contactUs,viewForum and postIdea,  so we are using "launchFeedback" ');
-				cfg[key]='launchFeedback';
-			}else if(key=='topicId'){
-				cfg[key]=parseInt(cfg[key]);
-			}else if(key.indexOf('show')>-1){
-				cfg[key] = (cfg[key]==1)?1:0;
-			}
-			config[key] = cfg[key];
-		}
-	}
-	
-	cordova.exec(successCallback, errorCallback, "CDVUserVoice", "init", [config]);	
+Uservoice.launchFeedback = function(){
+	cordova.exec(successCallback, errorCallback, "CDVUserVoice", 'launchFeedback', []);	
+};
+
+Uservoice.launchForum = function(){
+	cordova.exec(successCallback, errorCallback, "CDVUserVoice", 'launchForum', []);	
+};
+
+Uservoice.launchContactUs = function(){
+	cordova.exec(successCallback, errorCallback, "CDVUserVoice", 'launchContactUs', []);	
+};
+
+Uservoice.launchPostIdea = function(){
+	cordova.exec(successCallback, errorCallback, "CDVUserVoice", 'launchPostIdea', []);	
 };
 
 module.exports = Uservoice;

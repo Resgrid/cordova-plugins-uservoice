@@ -9,12 +9,12 @@
     <name>UserVoice</name>
 
     <description>
-      This plugin adds the UserVoice user engagement interface to your application.
+      This plugin adds the UserVoice user engagement interface to your application. Currently supports iOS and Android. This plugin was created by Resgrid for use in our Ionic applications. You need to subscribe to the UserVoice service to use the plugin.
     </description>
 
-    <license>https://raw.githubusercontent.com/Resgrid/cordova-plugins-uservoice/master/LICENSE</license>
+    <license>Apache 2.0</license>
 
-    <keywords>resgrid, uservoice, user, voice, engagement, customer, helpdesk, knowledge, reporting</keywords>
+    <keywords>resgrid, uservoice, user, voice, engagement, customer, helpdesk, knowledge, base, reporting</keywords>
 
     <engines>
         <engine name="cordova" version=">=3.3.0" />
@@ -44,7 +44,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="CDVUserVoice">
-                <param name="android-package" value="resgrid.cordova.plugins.userVoice" />
+                <param name="android-package" value="resgrid.cordova.plugins.uservoice" />
             </feature>
         </config-file>
 
