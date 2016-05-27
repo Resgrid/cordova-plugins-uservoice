@@ -4,7 +4,7 @@
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="resgrid.cordova.plugins.uservoice"
-    version="1.0.0">
+    version="1.1.0">
 
     <name>UserVoice</name>
 
@@ -34,10 +34,15 @@
             <plugin name="CDVUserVoice" value="CDVUserVoice"/>
         </config-file>
 
-        <header-file src="platforms/ios/CDVUserVoice.h" />
-        <source-file src="platforms/ios/CDVUserVoice.m" />
+        <header-file src="src/ios/CDVUserVoice.h" />
+        <source-file src="src/ios/CDVUserVoice.m" />
 
-        <framework src="platforms/ios/UserVoiceSDK/libUserVoice.a" />
+        <!--<framework src="src/ios/UserVoiceSDK/libUserVoice.a" custom="true" /> -->
+        <source-file src="src/ios/UserVoiceSDK/libUserVoice.a" framework="true" />
+        <header-file src="src/ios/UserVoiceSDK/UVHeaders/UserVoice.h" />
+        <header-file src="src/ios/UserVoiceSDK/UVHeaders/UVConfig.h" />
+        <header-file src="src/ios/UserVoiceSDK/UVHeaders/UVDelegate.h" />
+        <header-file src="src/ios/UserVoiceSDK/UVHeaders/UVStyleSheet.h" />
     </platform>
 
     <!-- android -->
@@ -49,10 +54,10 @@
         </config-file>
 
         <!-- copy Rollbar Lib -->
-        <source-file src="platforms/android/UserVoiceSDK/uservoice-android-sdk-1.2.4-sources.jar" target-dir="libs/" framework="true" />
+        <source-file src="src/android/UserVoiceSDK/uservoice-android-sdk-1.2.4-sources.jar" target-dir="libs/" framework="true" />
 
         <!-- cordova plugin src files -->
-        <source-file src="platforms/android/resgrid/cordova/plugins/CDVUserVoice.java" target-dir="src/resgrid/cordova/plugins/" />
+        <source-file src="src/android/resgrid/cordova/plugins/CDVUserVoice.java" target-dir="src/resgrid/cordova/plugins/" />
 
     </platform>
 

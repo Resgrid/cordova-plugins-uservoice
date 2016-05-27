@@ -4,7 +4,7 @@
 //  
 //
 
-#import "UserVoice.h"
+#import "CDVUserVoice.h"
 
 @implementation CDVUserVoice
 
@@ -30,7 +30,7 @@
 }
 
 - (void)contactUs {
-    UserVoice presentUserVoiceContactUsFormForParentViewController:self];
+    [UserVoice presentUserVoiceContactUsFormForParentViewController:self];
 }
 
 - (void)viewForum {

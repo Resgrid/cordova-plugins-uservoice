@@ -9,9 +9,9 @@
 #import "UserVoice.h"
 
 @interface CDVUserVoice : CDVPlugin
-- (void)init:(CDVInvokedUrlCommand*)command
+- (void)init:(CDVInvokedUrlCommand*)command;
 - (void)launchFeedback;
 - (void)contactUs;
 - (void)viewForum;
-- (void)postIdea;
+- (void)postIdea:(NSMutableDictionary*)options;
 @end
