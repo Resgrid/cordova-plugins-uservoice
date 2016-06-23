@@ -54,7 +54,12 @@
         </config-file>
 
         <!-- copy Rollbar Lib -->
-        <source-file src="src/android/UserVoiceSDK/uservoice-android-sdk-1.2.4-sources.jar" target-dir="libs/" framework="true" />
+        <source-file src="src/android/okhttp/okhttp-2.7.5.jar" target-dir="libs/" framework="true" />
+        <source-file src="src/android/Apache/apache-httpcomponents-httpcore.jar" target-dir="libs/" framework="true" />
+        <source-file src="src/android/Apache/apache-httpcomponents-httpclient.jar" target-dir="libs/" framework="true" />
+        <source-file src="src/android/SignPost/signpost-core-1.2.1.2.jar" target-dir="libs/" framework="true" />
+        <source-file src="src/android/SignPost/signpost-commonshttp4-1.2.1.2.jar" target-dir="libs/" framework="true" />
+        <source-file src="src/android/UserVoiceSDK/uservoice-android-sdk-1.2.5-sources.jar" target-dir="libs/" framework="true" />
 
         <!-- cordova plugin src files -->
         <source-file src="src/android/resgrid/cordova/plugins/CDVUserVoice.java" target-dir="src/resgrid/cordova/plugins/" />

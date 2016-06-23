@@ -15,6 +15,9 @@ import org.json.JSONObject;
 import android.content.Context;
 import android.content.res.Resources;
 
+import com.uservoice.uservoicesdk.Config;
+import com.uservoice.uservoicesdk.UserVoice;
+
 public class CDVUserVoice extends CordovaPlugin {
 	public static final String INIT = "init";
     public static final String LAUNCH_FEEDBACK = "launchFeedback";
