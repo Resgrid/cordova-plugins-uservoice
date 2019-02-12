@@ -20,7 +20,7 @@ This plugin requires a UserVoice account. Sign up for your free UserVoice accoun
 You can install the plugin by running the following command.
 
 ```
-cordova plugin add https://github.com/Resgrid/cordova-plugins-uservoice.git
+cordova plugin add https://github.com/ninozivan/cordova-plugins-uservoice.git
 ```
 
 ## Supported Platforms ##

@@ -62,7 +62,7 @@
         <source-file src="src/android/UserVoiceSDK/uservoice-android-sdk-1.2.5-sources.jar" target-dir="libs/" framework="true" />
 
         <!-- cordova plugin src files -->
-        <source-file src="src/android/resgrid/cordova/plugins/CDVUserVoice.java" target-dir="src/resgrid/cordova/plugins/" />
+        <source-file src="src/android/ninozivan/cordova/plugins/CDVUserVoice.java" target-dir="src/ninozivan/cordova/plugins/" />
 
     </platform>
 

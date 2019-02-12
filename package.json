@@ -1,0 +1,29 @@
+{
+  "name": "cordova-plugin-uservoice",
+  "version": "1.0.0",
+  "description": "Cordova Android back-as-home Plugin",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninozivan/cordova-plugin-uservoice.git"
+  },
+  "keywords": [
+    "cordova",
+    "uservoice"
+  ],
+  "author": "Shawn Jackson",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ninozivan/cordova-plugin-uservoice/issues"
+  },
+  "homepage": "https://github.com/ninozivan/cordova-plugin-uservoice#readme",
+  "engines": {
+    "cordovaDependencies": {
+      "3.0.0": {
+        "cordova": ">100"
+      }
+    }
+  }
+}
